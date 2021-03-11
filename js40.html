@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8. js40</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <p id="p1">Наведите указатель на картинку!</p>
+    <img onmouseover="showDescription()" onmouseout="hideDescription()" src="images/summer.jpg" alt="summer.jpg">
+    <script>
+        function showDescription(){
+            p1.innerHTML = "Вы видите картинку summer.jpg";
+        }
+        function hideDescription(){
+            p1.innerHTML = "Наведите указатель на картинку!";
+        }
+        // onmouseover / onmouseout
+    </script>
+</body>
+</html>
