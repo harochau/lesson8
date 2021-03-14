@@ -1,35 +1,50 @@
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lesson 8. js40</title>
     <style>
-        #p2{
-            visibility: hidden;
-            /* background: #aaa; */
-        }
-        #pic:hover ~ #p2{
-            visibility: visible;
-            /* background: #ccc; */
-            /* p2.innerHTML = "Вы видите картинку summer.jpg2"; */
-        }
+      .class2 {
+        visibility: hidden;
+        /* background: #aaa; */
+      }
+      #pic:hover ~ .class2 {
+        visibility: visible;
+        /* background: #ccc; */
+        /* p2.innerHTML = "Вы видите картинку summer.jpg2"; */
+      }
     </style>
-</head>
-<body>
-    
-    
-    <img id="pic" onmouseover="showDescription()" onmouseout="hideDescription()" src="images/summer.jpg" alt="summer.jpg">
+  </head>
+  <body>
+    <img
+      id="pic"
+      onmouseover="showDescription()"
+      onmouseout="hideDescription()"
+      src="images/summer.jpg"
+      alt="summer.jpg"
+    />
     <p id="p1">Наведите указатель на картинку!</p>
-    <p id="p2">Вы видите картинку summer.jpg2</p>
+    <p id="p2" class="class2">Вы видите картинку summer.jpg2</p>
+    <p>
+      <input
+        type="text"
+        id="id1"
+        placeholder="Введите ID"
+        onchange="changeUpperCase()"
+      />
+    </p>
     <script>
-        function showDescription(){
-            p1.innerHTML = "Вы видите картинку summer.jpg";
-        }
-        function hideDescription(){
-            p1.innerHTML = "Наведите указатель на картинку!";
-        }
-        // onmouseover / onmouseout
+      function showDescription() {
+        p1.innerHTML = "Вы видите картинку summer.jpg";
+      }
+      function hideDescription() {
+        p1.innerHTML = "Наведите указатель на картинку!";
+      }
+      function changeUpperCase(){
+          id1.value = id1.value.toUpperCase();
+      }
+      // onmouseover / onmouseout
     </script>
-</body>
+  </body>
 </html>

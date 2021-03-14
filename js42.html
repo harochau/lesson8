@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8. js42</title>
+</head>
+<body>
+    <img id="pic" src="images/1.jpg" alt="">
+    <p id="p1">Привет всем!</p>
+    <button id="but1" onclick="change()">Изменить</button>
+    <script>
+
+        //getElementById()
+        function change(){
+            
+            let im = document.getElementById("pic");
+            im.src = "images/2.jpg";
+            let text = document.getElementById("p1");
+            text.innerHTML = "Hello everybody!";
+        }
+    </script>
+</body>
+</html>

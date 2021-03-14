@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8. js41</title>
+</head>
+<body>
+    <!-- onclick="func1(), func2()" -->
+    <input type="button"   id="elem" value="Нажми меня">
+    <p id="elem1" style="width: 200px;">Наведи на меня</p>
+    <script>
+
+        function func1(){
+            alert("Hello!");
+
+        }
+        function func2(){
+            alert("Hello again!");
+            // elem.removeEventListener('click',func1);
+            
+        }
+
+        function say(){
+            elem1.innerHTML = `
+Приставка on не используется не используется в событиях
+ для addEventListener
+            `;
+        }
+        function doColor(){
+            document.body.style.background = '#ff91a4';
+            document.body.style.color = 'white';
+            document.body.style.fontSize = '1.5em';
+        }
+
+        elem.addEventListener('click',func1);
+        // elem.addEventListener('click',func2);
+        elem.addEventListener('mouseover',say);
+        elem.addEventListener('mouseover',doColor);
+    </script>
+</body>
+</html>
